@@ -39,7 +39,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-white/90 backdrop-blur border-b sticky top-0 z-50">
+    <nav className="bg-white/90 backdrop-blur border-b border-b-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Brand */}
         <div className="flex items-center gap-2">

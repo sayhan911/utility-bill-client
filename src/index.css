@@ -12,6 +12,10 @@
              hover:bg-green-700 hover:-translate-y-0.5
              active:scale-95 transition-all duration-200 shadow-sm;
   }
+  .btn-secondary {
+    @apply mt-8 inline-flex items-center gap-2 rounded-full border border-green-400/60
+    px-6 py-3 text-green-800 hover:bg-white hover:shadow transition-all duration-300;
+  }
 
   .btn-social {
     @apply p-2 rounded-full bg-white shadow-sm 
@@ -27,4 +31,30 @@
            transition-all duration-300 ease-out
            group-hover:-translate-y-0.5 group-hover:shadow-md;
   }
+
+  .section-title {
+    @apply flex items-center gap-1 text-green-700 font-medium tracking-[0.2em] text-sm;
+  }
+  .category-card {
+    @apply rounded-2xl bg-white p-7 shadow-md shadow-gray-200/50
+    hover:shadow-lg transition-all duration-300 ease-out hover:-translate-y-1;
+  }
+}
+
+/* smooth outlined text like "IT Solutions" */
+.text-stroke {
+  -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.6);
+  color: transparent;
+}
+
+/* subtle white blob behind nav button */
+.nav-blob {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  background: white;
+  border-radius: 9999px;
+  opacity: 0.9;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) inset,
+    0 8px 16px rgba(0, 0, 0, 0.08);
 }

@@ -4,6 +4,9 @@ import "./index.css";
 import AuthProvider from "./provider/AuthProvider.jsx";
 import { RouterProvider } from "react-router";
 import router from "./routes/routes.jsx";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
