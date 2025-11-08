@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+@layer components {
+  .brand-logo {
+    @apply inline-flex h-10 w-10 items-center justify-center
+               rounded-full bg-green-600 text-white font-bold text-xl
+               transition-all duration-300 ease-out
+               hover:bg-green-700 hover:scale-105 hover:shadow-md;
+  }
+  .btn-primary {
+    @apply px-6 py-3 rounded-full bg-green-600 text-white font-semibold
+             hover:bg-green-700 hover:-translate-y-0.5
+             active:scale-95 transition-all duration-200 shadow-sm;
+  }
+
+  .btn-social {
+    @apply p-2 rounded-full bg-white shadow-sm 
+           transition-all duration-300 ease-out 
+           hover:-translate-y-0.5 hover:shadow-md 
+           active:scale-95;
+  }
+  .btn-social-icon {
+    @apply transition-transform duration-300 group-hover:scale-110;
+  }
+  .icon-box {
+    @apply h-9 w-9 rounded-md bg-white shadow flex items-center justify-center
+           transition-all duration-300 ease-out
+           group-hover:-translate-y-0.5 group-hover:shadow-md;
+  }
+}
