@@ -33,7 +33,7 @@
   }
 
   .section-title {
-    @apply flex items-center gap-1 text-green-700 font-medium tracking-[0.2em] text-sm;
+    @apply flex items-center gap-1 text-green-700 font-medium tracking-[0.2em] text-sm md:text-base uppercase;
   }
   .category-card {
     @apply rounded-2xl bg-white p-7 shadow-md shadow-gray-200/50

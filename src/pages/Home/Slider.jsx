@@ -2,7 +2,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
-// Replace with your real images
 const slides = [
   {
     img: "https://i.postimg.cc/3NSDrnq7/pexels-photo-6328856.jpg",
@@ -64,12 +63,13 @@ export default function Slider() {
             className="pb-9! h-[420px] md:h-[520px] lg:h-[620px]"
           >
             {slides.map((s, i) => (
-              <SwiperSlide key={i} className="h-full">
+              <SwiperSlide key={i} className="h-full relative overflow-hidden">
                 <div className="relative h-full">
+                  {/* Add smooth zoom effect */}
                   <img
                     src={s.img}
                     alt=""
-                    className="absolute inset-0 h-full w-full object-cover"
+                    className="absolute inset-0 h-full w-full object-cover animate-zoom"
                   />
                   <div className="absolute inset-0 bg-[#0b1020]/60" />
 
@@ -98,6 +98,20 @@ export default function Slider() {
           </Swiper>
         </div>
       </div>
+
+      {/* Smooth zoom keyframes */}
+      <style>
+        {`
+          @keyframes zoomIn {
+            0%   { transform: scale(1); }
+            100% { transform: scale(1.12); }
+          }
+          .animate-zoom {
+            animation: zoomIn 6s ease-in-out infinite alternate;
+            transform-origin: center;
+          }
+        `}
+      </style>
     </section>
   );
 }
