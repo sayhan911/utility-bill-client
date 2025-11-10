@@ -15,7 +15,6 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // EXACT same flow as your previous project
   const handleLogIn = (e) => {
     e.preventDefault();
     const form = e.target;

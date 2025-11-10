@@ -16,7 +16,6 @@ const Register = () => {
   const [nameError, setNameError] = useState("");
   const navigate = useNavigate();
 
-  // EXACT same validation & flow you used
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -79,6 +78,25 @@ const Register = () => {
         .then((result) => {
           setUser(result.user);
           navigate("/");
+
+          const newUser = {
+            user: result.user.displayName,
+            email: result.user.email,
+            image: result.user.photoURL,
+          };
+          // Create user in the database
+          fetch("http://localhost:3000/users", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(newUser),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              console.log("data after save", data);
+            })
+            .catch((err) => console.error("❌ Save failed:", err));
         })
         .catch((error) => {
           throw new Error(`Google Signup failed.\nReason: ${error.code}`);
