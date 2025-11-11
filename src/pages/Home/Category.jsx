@@ -14,15 +14,16 @@ const Category = () => {
             <div className="rounded-[28px] p-8 md:p-10 bg-linear-to-br from-green-100/70 via-green-50 to-transparent shadow-lg">
               <p className="section-title">
                 <IoBulbOutline />
-                <span className="pt-0.5">Our features</span>
+                <span className="pt-0.5">Our categories</span>
               </p>
 
               <h2 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight text-[#111827]">
-                Harness Your Utility Bills With
+                Harness Your{" "}
+                <span className="text-green-700">Utility Bills</span> With
                 <br /> Clear, Simple Management!
               </h2>
 
-              <p className="mt-5 text-base text-gray-600 leading-relaxed">
+              <p className="my-5 text-base text-gray-600 leading-relaxed">
                 Keep all your monthly utilities organized — Electricity, Gas,
                 Water, and Internet — with fast filtering and current-month
                 payment.

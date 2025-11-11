@@ -45,29 +45,33 @@ export default function RecentBills() {
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-      <div className="relative">
-        {/* dots */}
-        <div className="absolute -left-6 -top-6 h-24 w-24 opacity-20 hidden sm:block">
-          <svg viewBox="0 0 100 100" className="h-full w-full">
-            {Array.from({ length: 100 }).map((_, i) => (
-              <circle
-                key={i}
-                cx={(i % 10) * 10}
-                cy={Math.floor(i / 10) * 10}
-                r="1.5"
-                fill="#6b7280"
-              />
-            ))}
-          </svg>
+      <div className="flex justify-between items-center">
+        <div className="relative">
+          {/* dots */}
+          <div className="absolute -left-6 -top-6 h-24 w-24 opacity-20 hidden sm:block">
+            <svg viewBox="0 0 100 100" className="h-full w-full">
+              {Array.from({ length: 100 }).map((_, i) => (
+                <circle
+                  key={i}
+                  cx={(i % 10) * 10}
+                  cy={Math.floor(i / 10) * 10}
+                  r="1.5"
+                  fill="#6b7280"
+                />
+              ))}
+            </svg>
+          </div>
+
+          <p className="section-title">
+            <LuNewspaper />
+            Recent Bills
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-5 font-semibold text-[#1E2631] mt-2">
+            Pay Your <span className="text-green-700">Bills</span> Now!
+          </h2>
         </div>
 
-        <p className="section-title">
-          <LuNewspaper />
-          Recent Bills
-        </p>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl mb-5 font-semibold text-[#1E2631] mt-2">
-          Pay Your Bills Now!
-        </h2>
+        <button className="btn-secondary">Explore All Bills</button>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {bills.map((bill, idx) => (

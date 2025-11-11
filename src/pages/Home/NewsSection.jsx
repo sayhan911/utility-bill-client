@@ -29,7 +29,7 @@ const NewsSection = () => {
                 Latest News
               </p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1E2631] mt-2">
-                News & Update
+                News & <span className="text-green-700">Update</span>
               </h2>
             </div>
 

@@ -14,7 +14,7 @@ const slides = [
   },
   {
     img: "https://images.pexels.com/photos/7657728/pexels-photo-7657728.jpeg",
-    kicker: "STAY ORGANISED & IN CONTROL",
+    kicker: "STAY ORGANIZED & IN CONTROL",
     title: "Track, View & Manage",
     outline: "All Your Bills",
     desc: "BillEase gives you complete control with reminders, transaction history, and categorized summaries—so you never miss a payment.",
