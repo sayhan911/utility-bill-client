@@ -58,7 +58,7 @@ export default function Bills() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:3000/bills")
+    fetch("https://utility-bill-server-eight.vercel.app/bills")
       .then((res) => res.json())
       .then((data) => {
         const uniqueCategories = [
@@ -72,7 +72,7 @@ export default function Bills() {
 
   useEffect(() => {
     setLoading(true);
-    const url = "http://localhost:3000/bills";
+    const url = "https://utility-bill-server-eight.vercel.app/bills";
     const query =
       selectedCategory !== "all" ? `?category=${selectedCategory}` : "";
 
@@ -111,7 +111,7 @@ export default function Bills() {
         newBillForm.category.slice(1),
     };
 
-    fetch("http://localhost:3000/bills", {
+    fetch("https://utility-bill-server-eight.vercel.app/bills", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(billData),
@@ -122,7 +122,7 @@ export default function Bills() {
           toast.success("Bill added successfully!");
 
           setLoading(true);
-          const url = "http://localhost:3000/bills";
+          const url = "https://utility-bill-server-eight.vercel.app/bills";
           const query =
             selectedCategory !== "all" ? `?category=${selectedCategory}` : "";
 

@@ -10,7 +10,7 @@ export default function RecentBills() {
 
   useEffect(() => {
     let alive = true;
-    fetch("http://localhost:3000/recent-bills")
+    fetch("https://utility-bill-server-eight.vercel.app/recent-bills")
       .then((res) => res.json())
       .then((data) => alive && setBills(Array.isArray(data) ? data : []))
       .catch((e) => console.error("Recent bills error:", e))

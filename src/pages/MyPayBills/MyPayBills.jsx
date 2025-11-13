@@ -49,7 +49,9 @@ export default function MyPayBills() {
       return;
     }
     setLoading(true);
-    fetch(`http://localhost:3000/payments?email=${user.email}`)
+    fetch(
+      `https://utility-bill-server-eight.vercel.app/payments?email=${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setPayments(data))
       .catch((err) => {
@@ -152,7 +154,9 @@ export default function MyPayBills() {
 
     try {
       const res = await fetch(
-        `http://localhost:3000/payments/${selectedBill._id || selectedBill.id}`,
+        `https://utility-bill-server-eight.vercel.app/payments/${
+          selectedBill._id || selectedBill.id
+        }`,
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
@@ -210,7 +214,7 @@ export default function MyPayBills() {
     setDeleting(true);
     try {
       const res = await fetch(
-        `http://localhost:3000/payments/${deleteTargetId}`,
+        `https://utility-bill-server-eight.vercel.app/payments/${deleteTargetId}`,
         {
           method: "DELETE",
         }
