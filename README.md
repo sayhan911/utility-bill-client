@@ -7,7 +7,7 @@ Built with React (Vite), Tailwind CSS, Firebase Authentication, and Express + Mo
 
 | Type                 | URL                                                                                          |
 | -------------------- | -------------------------------------------------------------------------------------------- |
-| 🖥️ Client (Frontend) |                                                                                              |
+| 🖥️ Client (Frontend) | [https://utility-bills-7097f.web.app/](https://utility-bills-7097f.web.app/)                 |
 | ⚙️ Server (Backend)  | [https://utility-bill-server-eight.vercel.app](https://utility-bill-server-eight.vercel.app) |
 | 💾 Database          | MongoDB Atlas                                                                                |
 
