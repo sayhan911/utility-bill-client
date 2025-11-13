@@ -10,6 +10,7 @@ import MyPayBills from "../pages/MyPayBills/MyPayBills";
 import PrivateRoute from "../provider/PrivateRoute";
 import BillDetails from "../pages/BillDetails/BillDetails";
 import RouteTitle from "../components/RouteTitle/RouteTitle";
+import Auth from "../pages/Auth/Auth";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,14 @@ const router = createBrowserRouter([
               <BillDetails />
             </RouteTitle>
           </PrivateRoute>
+        ),
+      },
+      {
+        path: "auth",
+        element: (
+          <RouteTitle title="Auth">
+            <Auth />
+          </RouteTitle>
         ),
       },
       {

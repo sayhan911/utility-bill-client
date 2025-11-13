@@ -267,10 +267,18 @@ export default function Bills() {
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          onClick={() => navigate(`/bills/${bill._id}`)}
+                          onClick={() => {
+                            if (user) {
+                              navigate(`/bills/${bill._id}`);
+                            } else {
+                              navigate("/auth", {
+                                state: { from: `/bills/${bill._id}` },
+                              });
+                            }
+                          }}
                           className="mt-4 w-full inline-flex items-center justify-center gap-1 text-sm font-medium text-white bg-green-600 px-4 py-2.5 rounded-lg hover:bg-green-700 transition-colors"
                         >
-                          See Details →
+                          See Details
                         </motion.button>
                       </div>
                     </motion.div>

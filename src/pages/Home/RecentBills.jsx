@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Calendar, MapPin, Tag, ArrowRight } from "lucide-react";
 import { LuNewspaper } from "react-icons/lu";
+import AuthContext from "../../provider/AuthContext";
 
 export default function RecentBills() {
   const [bills, setBills] = useState([]);
@@ -84,6 +85,7 @@ export default function RecentBills() {
 
 // Card Design
 function BillCard({ bill, index }) {
+  const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   const ref = useRef(null);
   const [show, setShow] = useState(false);
@@ -103,6 +105,16 @@ function BillCard({ bill, index }) {
     io.observe(el);
     return () => io.disconnect();
   }, [index]);
+
+  const handleSeeDetails = () => {
+    if (user) {
+      navigate(`/bills/${bill._id}`);
+    } else {
+      navigate("/auth", {
+        state: { from: `/bills/${bill._id}` },
+      });
+    }
+  };
 
   return (
     <article
@@ -140,7 +152,7 @@ function BillCard({ bill, index }) {
       </div>
 
       <button
-        onClick={() => navigate(`/bills/${bill._id || bill.id}`)}
+        onClick={handleSeeDetails}
         className={`
           mt-6 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-linear-to-r from-green-600 to-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md hover:from-green-700 hover:to-emerald-700 hover:shadow-lg hover:shadow-emerald-500/30
           transform transition-all duration-300 active:scale-95`}

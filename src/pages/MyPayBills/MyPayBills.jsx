@@ -88,8 +88,8 @@ export default function MyPayBills() {
   if (loading || authLoading) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-linear-to-br from-indigo-50 to-purple-50 p-4">
-        <Loader2 className="w-14 h-14 animate-spin text-indigo-600 mb-4" />
-        <p className="text-lg font-medium text-indigo-700 animate-pulse text-center">
+        <Loader2 className="w-14 h-14 animate-spin text-green-600 mb-4" />
+        <p className="text-lg font-medium text-green-700 animate-pulse text-center">
           Loading your bills...
         </p>
       </div>
