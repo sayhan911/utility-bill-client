@@ -90,3 +90,77 @@ Built with React (Vite), Tailwind CSS, Firebase Authentication, and Express + Mo
 - 🧾 **Axios interceptor** (optional improvement).
 - 🧭 **Dynamic Page Titles** for each route.
 - 🧩 **Responsive Navbar** with user avatar and dropdown.
+
+## 🧩 Dependencies
+
+### 🎨 Frontend
+```json
+"dependencies": {
+  "@tailwindcss/vite": "4.1.17",
+  "firebase": "12.5.0",
+  "framer-motion": "12.23.24",
+  "jspdf": "3.0.3",
+  "jspdf-autotable": "5.0.2",
+  "lottie-react": "2.4.1",
+  "lucide-react": "0.553.0",
+  "react": "19.1.1",
+  "react-awesome-reveal": "4.3.1",
+  "react-dom": "19.1.1",
+  "react-hot-toast": "2.6.0",
+  "react-icons": "5.5.0",
+  "react-router": "7.9.5",
+  "react-spinners": "0.17.0",
+  "swiper": "12.0.3",
+  "tailwindcss": "4.1.17"
+}
+```
+
+### ⚙️ Backend
+```json
+"dependencies": {
+  "cors": "2.8.5",
+  "dotenv": "17.2.3",
+  "express": "5.1.0",
+  "mongodb": "7.0.0"
+}
+```
+## 🚀 Run Locally
+
+```bash
+# Clone & enter the project
+git clone https://github.com/sayhan-ahmed/utility-bill-client.git
+cd utility-bill-client
+
+# Install dependencies
+npm install
+# or → yarn / pnpm install
+
+# Setup environment variables
+cp .env.example .env
+# Edit .env with your own keys (MongoDB URI, etc.)
+
+# Start dev server
+npm run dev
+
+# Open localhost in your browser
+# e.g. http://localhost:5173 for Vite
+```
+
+<br><br>
+
+<div align="center">
+  
+### 🌐 Connect with Me
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230A66C2.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/sayhan-ahmed) 
+[![GitHub](https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white)](https://github.com/sayhan-ahmed) 
+[![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?logo=About.me&logoColor=white)](https://sayhan.dev) 
+[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/sayhan911) 
+[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/noerrortoday) 
+[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:sayanahmed228@gmail.com) 
+
+</div>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,32,18,36&height=120&section=footer"/>
+</p>
